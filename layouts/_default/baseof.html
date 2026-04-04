@@ -1,0 +1,44 @@
+i<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ $style := resources.Get "css/input.css" | postCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <style>
+        body {
+            background-image: url('/images/bg/bg-seemless.png');
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 flex flex-col min-h-screen">
+
+    <header class="bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-red-600">SOS Palestina</a>
+            
+            <div class="flex gap-3 items-center">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="{{ if eq .Name "Doneren" }}{{ $.Site.Params.menu_donatie_class }}{{ else }}hidden md:block hover:text-red-600{{ end }}">
+                    {{ .Name }}
+                </a>
+                {{ end }}
+                <div class="md:hidden text-2xl">☰</div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 bg-white/80 my-4 rounded-lg shadow-lg">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+        </div>
+    </footer>
+
+</body>
+</html>

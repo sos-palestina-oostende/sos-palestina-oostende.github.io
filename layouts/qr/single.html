@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="canonical" href="{{ .Params.redirect_url }}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="refresh" content="0;url={{ .Params.redirect_url }}">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Je wordt doorgestuurd naar <a href="{{ .Params.redirect_url }}">{{ .Params.redirect_url }}</a>.</p>
+    <script>window.location.replace("{{ .Params.redirect_url }}");</script>
+</body>
+</html>
