@@ -1,0 +1,6 @@
+# build artifacts
+public/
+assets/css/main.css
+
+#  Node modules
+node_modules/

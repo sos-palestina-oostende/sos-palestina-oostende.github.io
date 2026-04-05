@@ -1,0 +1,11 @@
+{{ range .Page.Params.events }}
+<tr class="border-b border-olive-soft/10" data-date="{{ .date }}">
+    <td class="py-4 px-2 font-medium">
+        {{ $d := time .date }}
+        {{ $d.Day }} {{ index $.hugo.Data.maanden (printf "%d" $d.Month) }} {{ $d.Year }}
+    </td>
+    <td class="py-4 px-2 italic text-sm sm:text-base">
+        {{ .location }}
+    </td>
+</tr>
+{{ end }}

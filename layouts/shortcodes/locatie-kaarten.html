@@ -1,0 +1,21 @@
+<div class="not-prose grid grid-cols-1 gap-6 my-8">
+    {{ range $key, $data := .Page.Params.locaties }}
+    <div class="flex flex-col sm:flex-row bg-white/40 backdrop-blur-sm rounded-lg border border-olive-soft/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        
+        <a href="{{ $data.link }}" target="_blank" rel="noopener" class="w-full sm:w-48 h-48 sm:h-auto shrink-0 overflow-hidden group border-b sm:border-b-0 sm:border-r border-olive-soft/10">
+            <img src="{{ $data.img }}" alt="{{ $data.title }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        </a>
+
+        <div class="p-5 flex flex-col justify-center">
+            <h4 class="font-bold text-brown-dark mb-1 text-lg leading-tight">{{ $data.title }}</h4>
+            <p class="text-sm text-brown-dark/80 mb-4 leading-relaxed italic">
+                {{ $data.omschrijving }}
+            </p>
+            <a href="{{ $data.link }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-olive-soft hover:text-red-palestina transition-colors">
+                Open in kaart
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+        </div>
+    </div>
+    {{ end }}
+</div>

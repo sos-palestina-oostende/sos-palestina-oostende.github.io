@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Het pad is relatief aan waar de uiteindelijke CSS staat */
+    background-image: url('/images/bg/bg-seemless.png');
+    background-repeat: repeat;
+    background-attachment: fixed; /* Houdt de achtergrond op zijn plek tijdens scrollen */
+    @apply text-brown-dark bg-white;
+  }
+
+  main {
+    /* bg-white met 80% opacity en een lichte blur voor leesbaarheid */
+    @apply bg-white/25 backdrop-blur-sm shadow-xl rounded-lg;
+  }
+  
+  h1, h2, h3 {
+    @apply text-olive-soft font-bold;
+  }
+
+  .box {
+    @apply bg-olive-soft/80 text-white p-6 rounded-lg;
+
+    h1, h2, h3 {
+      margin-top: 0;
+      @apply text-red-palestina font-bold;
+    }
+  }
+}
+
+@layer components {
+  .prose table tbody tr:nth-child(odd) {
+    @apply bg-olive-soft/5;
+  }
+
+  .prose table tbody tr:hover {
+    @apply bg-olive-soft/10 transition-colors;
+  }
+}
+
+.btn-donatie {
+  @apply bg-red-palestina text-white px-6 py-2 rounded-full font-bold 
+         shadow-lg hover:bg-opacity-90 transition-all active:scale-95;
+}
+
+.glass-panel {
+  @apply bg-white/35 backdrop-blur-sm shadow-lg rounded-lg p-6 flex-grow container mx-auto px-4 py-8 my-4;
+}

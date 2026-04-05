@@ -5,19 +5,15 @@ theme: [] # We bouwen zelf met Tailwind, dus geen extern thema nodig
 
 params:
   description: "Steunacties voor Palestina vanuit Oostende"
-  menu_donatie_class: "bg-red-600 text-white px-4 py-2 rounded-full font-bold" # Styling voor de knop
+  logo: "/images/icon/flag-heart.svg"
+  facebook_url: "https://www.facebook.com/profile.php?id=61554252122843"
+  menu_donatie_class: "btn-donatie"
 
 menu:
   main:
-    - name: "Home"
-      url: "/"
-      weight: 1
     - name: "Praktisch"
       url: "/praktisch"
-      weight: 2
-    - name: "Onze Collectes"
-      url: "/collectes"
-      weight: 3
+      weight: 1
     - name: "Doneren"
       url: "/donaties"
-      weight: 4
+      weight: 2

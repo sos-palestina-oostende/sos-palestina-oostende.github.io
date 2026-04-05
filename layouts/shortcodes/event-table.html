@@ -1,0 +1,37 @@
+<div class="not-prose overflow-x-auto mt-6">
+  <table class="w-full text-left border-collapse" id="event-table">
+    <thead>
+      <tr class="border-b border-olive-soft/30 text-olive-soft uppercase text-sm tracking-widest">
+        <th class="py-3 px-2">Datum</th>
+        <th class="py-3 px-2">Locatie</th>
+      </tr>
+    </thead>
+    <tbody class="text-brown-dark">
+      {{ range .Page.Params.events }}
+      <tr class="border-b border-olive-soft/10 hover:bg-olive-soft/5 transition-colors" data-date="{{ .date }}">
+          <td class="py-4 px-2 font-medium">
+              {{ $d := time .date }}
+              {{ $d.Day }} {{ index $.Site.Data.maanden (printf "%d" $d.Month) }} {{ $d.Year }}
+          </td>
+          <td class="py-4 px-2 italic text-sm sm:text-base">
+              {{ .location }}
+          </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  (function() {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const rows = document.querySelectorAll("#event-table tbody tr");
+    rows.forEach(row => {
+      const eventDate = new Date(row.getAttribute("data-date"));
+      if (eventDate < today) {
+        row.style.display = 'none';
+      }
+    });
+  })();
+</script>

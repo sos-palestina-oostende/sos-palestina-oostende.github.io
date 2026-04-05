@@ -1,0 +1,27 @@
+{
+  "name": "sos-palestina-oostende.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sos-palestina-oostende/sos-palestina-oostende.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC0",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sos-palestina-oostende/sos-palestina-oostende.github.io/issues"
+  },
+  "homepage": "https://github.com/sos-palestina-oostende/sos-palestina-oostende.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19"
+  }
+}
