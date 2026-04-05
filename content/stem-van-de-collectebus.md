@@ -1,6 +1,5 @@
 ---
 title: "De Stem van de Collectebus"
-date: 2026-04-04
 layout: "single"
 ---
 

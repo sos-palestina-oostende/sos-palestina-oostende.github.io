@@ -12,7 +12,7 @@ params:
 menu:
   main:
     - name: "Praktisch"
-      url: "/praktisch"
+      url: "/praktisch/"
       weight: 1
     - name: "Doneren"
       url: "/donaties"
