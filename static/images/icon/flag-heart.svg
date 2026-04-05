@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 158.75 158.75"
+   version="1.1"
+   id="svg469"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="pro.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview471"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.75277076"
+     inkscape:cx="348.71174"
+     inkscape:cy="455.65"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs466">
+    <clipPath
+       id="clip-0">
+      <path
+         clip-rule="nonzero"
+         d="m 1144,1706 h 580 v 178 h -580 z m 0,0"
+         id="path2122" />
+    </clipPath>
+    <clipPath
+       id="clip-1">
+      <path
+         clip-rule="evenodd"
+         d="m 1434.0781,1434.1016 c 60.9727,-112.2461 182.9336,-112.2461 243.9102,-56.1211 60.9805,56.1211 60.9805,168.3711 0,280.6211 -42.6797,84.1836 -152.4492,168.3711 -243.9102,224.4961 -91.4687,-56.125 -201.2383,-140.3125 -243.9179,-224.4961 -60.9805,-112.25 -60.9805,-224.5 0,-280.6211 60.9804,-56.125 182.9414,-56.125 243.9179,56.1211 z m 0,0"
+         id="path2125" />
+    </clipPath>
+    <clipPath
+       id="clip-2">
+      <path
+         clip-rule="nonzero"
+         d="m 1144,1522 h 580 v 187 h -580 z m 0,0"
+         id="path2128" />
+    </clipPath>
+    <clipPath
+       id="clip-3">
+      <path
+         clip-rule="evenodd"
+         d="m 1434.0781,1434.1016 c 60.9727,-112.2461 182.9336,-112.2461 243.9102,-56.1211 60.9805,56.1211 60.9805,168.3711 0,280.6211 -42.6797,84.1836 -152.4492,168.3711 -243.9102,224.4961 -91.4687,-56.125 -201.2383,-140.3125 -243.9179,-224.4961 -60.9805,-112.25 -60.9805,-224.5 0,-280.6211 60.9804,-56.125 182.9414,-56.125 243.9179,56.1211 z m 0,0"
+         id="path2131" />
+    </clipPath>
+    <clipPath
+       id="clip-4">
+      <path
+         clip-rule="nonzero"
+         d="m 1144,1341 h 580 v 184 h -580 z m 0,0"
+         id="path2134" />
+    </clipPath>
+    <clipPath
+       id="clip-5">
+      <path
+         clip-rule="evenodd"
+         d="m 1434.0781,1434.1016 c 60.9727,-112.2461 182.9336,-112.2461 243.9102,-56.1211 60.9805,56.1211 60.9805,168.3711 0,280.6211 -42.6797,84.1836 -152.4492,168.3711 -243.9102,224.4961 -91.4687,-56.125 -201.2383,-140.3125 -243.9179,-224.4961 -60.9805,-112.25 -60.9805,-224.5 0,-280.6211 60.9804,-56.125 182.9414,-56.125 243.9179,56.1211 z m 0,0"
+         id="path2137" />
+    </clipPath>
+    <clipPath
+       id="clip-6">
+      <path
+         clip-rule="nonzero"
+         d="m 1144,1341 h 258 v 539 h -258 z m 0,0"
+         id="path2140" />
+    </clipPath>
+    <clipPath
+       id="clip-7">
+      <path
+         clip-rule="evenodd"
+         d="m 1434.0781,1434.1016 c 60.9727,-112.2461 182.9336,-112.2461 243.9102,-56.1211 60.9805,56.1211 60.9805,168.3711 0,280.6211 -42.6797,84.1836 -152.4492,168.3711 -243.9102,224.4961 -91.4687,-56.125 -201.2383,-140.3125 -243.9179,-224.4961 -60.9805,-112.25 -60.9805,-224.5 0,-280.6211 60.9804,-56.125 182.9414,-56.125 243.9179,56.1211 z m 0,0"
+         id="path2143" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       fill-rule="evenodd"
+       fill="#c42839"
+       fill-opacity="1"
+       d="M 79.376018,31.346419 C 95.508378,1.6479675 127.7772,1.6479675 143.91059,16.497707 c 16.13443,14.848712 16.13443,44.548195 0,74.247665 C 132.61825,113.01895 103.57507,135.29356 79.376018,150.1433 55.174922,135.29356 26.131716,113.01895 14.839405,90.745372 -1.295018,61.045902 -1.295018,31.346419 14.839405,16.497707 30.973802,1.6479675 63.24265,1.6479675 79.376018,31.346419"
+       id="path2238"
+       inkscape:label="fh-stroke"
+       inkscape:export-filename="flag-heart.png"
+       inkscape:export-xdpi="109.13875"
+       inkscape:export-ydpi="109.13875"
+       style="stroke-width:0.264583" />
+    <g
+       clip-path="url(#clip-0)"
+       id="g2244"
+       inkscape:label="fh-green"
+       transform="matrix(0.26458333,0,0,0.26458333,-300.05714,-348.09296)">
+      <g
+         clip-path="url(#clip-1)"
+         id="g2242">
+        <path
+           fill-rule="evenodd"
+           fill="#1a8750"
+           fill-opacity="1"
+           d="m 1725.9805,1706.6406 h -629.4688 v 186.0821 h 629.4688 v -186.0821"
+           id="path2240" />
+      </g>
+    </g>
+    <g
+       clip-path="url(#clip-2)"
+       id="g2250"
+       inkscape:label="fh-white"
+       transform="matrix(0.26458333,0,0,0.26458333,-300.05714,-348.09296)">
+      <g
+         clip-path="url(#clip-3)"
+         id="g2248">
+        <path
+           fill-rule="evenodd"
+           fill="#f5f5f5"
+           fill-opacity="1"
+           d="m 1724.1992,1522.5859 h -629.4609 v 186.0821 h 629.4609 v -186.0821"
+           id="path2246" />
+      </g>
+    </g>
+    <g
+       clip-path="url(#clip-4)"
+       id="g2256"
+       inkscape:label="fh-black"
+       transform="matrix(0.26458333,0,0,0.26458333,-300.05714,-348.09296)">
+      <g
+         clip-path="url(#clip-5)"
+         id="g2254">
+        <path
+           fill-rule="evenodd"
+           fill="#2f2f2f"
+           fill-opacity="1"
+           d="m 1724.1992,1338.5313 h -629.4609 v 186.082 h 629.4609 v -186.082"
+           id="path2252" />
+      </g>
+    </g>
+    <g
+       clip-path="url(#clip-6)"
+       id="g2262"
+       inkscape:label="fh-red"
+       transform="matrix(0.26458333,0,0,0.26458333,-300.05714,-348.09296)">
+      <g
+         clip-path="url(#clip-7)"
+         id="g2260">
+        <path
+           fill-rule="evenodd"
+           fill="#c42839"
+           fill-opacity="1"
+           d="m 1401.2305,1611.1523 -259.75,268.6563 0.9414,-538.8281 258.8086,270.1718"
+           id="path2258" />
+      </g>
+    </g>
+  </g>
+</svg>
