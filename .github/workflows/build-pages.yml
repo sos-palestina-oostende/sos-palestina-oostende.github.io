@@ -60,7 +60,6 @@ jobs:
         run: |
           hugo \
             --minify \
-            --verbose \
             --printPathWarnings \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
