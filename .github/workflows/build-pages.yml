@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Setup, Apply TailwindCss and Deploy Hugo site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -27,11 +27,10 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job
-  build:
+  setup:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.128.0
+    outputs:
+      node-modules-cache-hit: ${{ steps.cache-node-modules.outputs.cache-hit }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -48,6 +47,20 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Cache Node.js modules
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+      - name: Install node dependencies (including Tailwind CSS)
+        run: npm install
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.128.0
+    steps:
+      - name: Apply Tailwind CSS
+        run: npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
