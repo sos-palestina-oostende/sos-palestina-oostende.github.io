@@ -29,6 +29,8 @@ defaults:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.128.0
     outputs:
       node-modules-cache-hit: ${{ steps.cache-node-modules.outputs.cache-hit }}
     steps:
@@ -52,8 +54,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.128.0
     steps:
       - name: Apply Tailwind CSS
         run: npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify
