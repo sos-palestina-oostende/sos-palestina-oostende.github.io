@@ -31,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.128.0
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
     outputs:
       node-modules-cache-hit: ${{ steps.cache-node-modules.outputs.cache-hit }}
     steps:
@@ -59,13 +60,13 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           hugo \
-            --minify \
             --printPathWarnings \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: List public directory for debugging
+        run: find ./public -type f
 
   # Deployment job
   deploy:
