@@ -61,12 +61,15 @@ jobs:
         run: |
           hugo \
             --printPathWarnings \
+            --trace-deprecation \
+            --minify \
+            --baseURL "${{ steps.deployment.outputs.page_url }}" \
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
       - name: List public directory for debugging
-        run: find ./public -type f
+        run: echo -e "Files in ./public: to publish at ${{ steps.deployment.outputs.page_url }}\n--" && find ./public -type f
 
   # Deployment job
   deploy:
