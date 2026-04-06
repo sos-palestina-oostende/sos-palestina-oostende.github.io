@@ -1,0 +1,39 @@
+<div id="partner-container" class="space-y-8 my-8 flex flex-col">
+  {{ range $id, $partner := .Page.Params.partners }}
+  <div class="partner-card flex flex-col md:flex-row gap-6 p-6 bg-olive-soft/5 border border-olive-soft/20 rounded-xl shadow-sm hover:shadow-md transition-shadow" 
+        style="order: 0;" 
+        data-name="{{ $id }}">
+    
+    {{ if $partner.img }}
+    <div class="w-24 h-24 shrink-0 mx-auto md:mx-0">
+      <img src="{{ $partner.img }}" alt="Logo {{ $partner.name }}" class="w-full h-full object-contain drop-shadow rounded-lg">
+    </div>
+    {{ end }}
+
+    <div class="flex-grow">
+      <h3 class="text-xl font-bold text-brown-dark mb-2">{{ $partner.name }}</h3>
+      <div class="prose prose-sm mb-4 text-gray-700">
+        {{ $partner.descr | markdownify }}
+      </div>
+
+      <div class="flex flex-wrap gap-3 mt-4">
+        {{ if $partner.link }}
+          <a href="{{ $partner.link }}" target="_blank" class="text-sm font-medium text-olive-soft hover:underline">Bezoek website →</a>
+        {{ end }}
+        
+        {{ if $partner.donate.link }}
+          <a href="{{ $partner.donate.link }}" target="_blank" class="bg-red-palestina text-white px-4 py-2 rounded text-sm font-bold hover:bg-opacity-90 transition-colors">Doneer Direct</a>
+        {{ end }}
+      </div>
+
+      {{ if $partner.donate.iban }}
+      <div class="mt-4 p-3 bg-white/50 rounded border border-olive-soft/10 text-xs font-mono">
+        <span class="block text-gray-500 uppercase font-sans font-bold">Bankgegevens:</span>
+        IBAN: {{ $partner.donate.iban }}<br>
+        BIC: {{ $partner.donate.bic }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
