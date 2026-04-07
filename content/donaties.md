@@ -19,7 +19,7 @@ partners:
   olijven-en-dadels: 
     name: زيتون و تمور Olijven en Dadels
     descr: |
-        Oostends netwerkverband van Amnesty Internation, Broederlijk Delen, 
+        Oostends netwerkverband van Amnesty International, Broederlijk Delen, 
         Pax Christi Vlaanderen en Oxfam wereldwinkels rond Israël-Palestina.
     link: https://www.facebook.com/p/%D8%B2%D9%8A%D8%AA%D9%88%D9%86-%D9%88-%D8%AA%D9%85%D9%88%D8%B1-Olijven-en-Dadels-100068986552404/
     img: /images/logo/olijven-en-dadels.jpg
