@@ -19,3 +19,5 @@ hugo server -D
 
 # 4. Cleanup: als je Hugo stopt (Ctrl+C), stopt ook de Tailwind watcher door:
 kill $TW_PID
+
+echo "Tailwind watcher met PID $TW_PID is gestopt. Cleanup voltooid."

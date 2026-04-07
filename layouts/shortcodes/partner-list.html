@@ -17,13 +17,18 @@
       </div>
 
       <div class="flex flex-wrap gap-3 mt-4">
+        {{ if $partner.donate.link }}
+          <a href="{{ $partner.donate.link }}" target="_blank" class="bg-red-palestina text-white px-4 py-2 rounded text-sm font-bold hover:bg-opacity-90 transition-colors">Doneer Direct</a>
+        {{ end }}
+        
         {{ if $partner.link }}
           <a href="{{ $partner.link }}" target="_blank" class="text-sm font-medium text-olive-soft hover:underline">Bezoek website →</a>
         {{ end }}
         
-        {{ if $partner.donate.link }}
-          <a href="{{ $partner.donate.link }}" target="_blank" class="bg-red-palestina text-white px-4 py-2 rounded text-sm font-bold hover:bg-opacity-90 transition-colors">Doneer Direct</a>
+        {{ if $partner.email }}
+          <a href="mailto:{{ $partner.email }}" class="text-sm font-medium text-olive-soft hover:underline">Stuur e-mail →</a>
         {{ end }}
+        
       </div>
 
       {{ if $partner.donate.iban }}
