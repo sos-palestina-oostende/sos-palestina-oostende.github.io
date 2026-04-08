@@ -1,0 +1,184 @@
+{{/* 1. Initialisatie & Data ophalen */}}
+{{ $p := dict }}
+{{ $partner_id := .Get "partner_id" }}
+{{ if $partner_id }}
+    {{ $p = index hugo.Data.partners $partner_id }}
+{{ end }}
+
+{{/* 2. Fallback Logica: Param > Data file > Default/Null */}}
+{{ $naam := .Get "naam" | default $p.donate.name | default "" }}
+{{ $iban := .Get "iban" | default $p.donate.iban | default "" }}
+{{ $bic := .Get "bic" | default $p.donate.bic | default "" }}
+{{ $mededeling := .Get "mededeling" | default .Page.Params.mededeling | default "Betaling via SOS Palestina Oostende" }}
+{{ $prijzen := split (.Get "prijzen" | default "5,10,20,50") "," }}
+
+<div class="bg-white border border-olive-soft/20 rounded-2xl p-8 shadow-lg max-w-2xl mx-auto" id="donation-app">
+    <div class="space-y-6">
+        {{/* Partner Header (indien data beschikbaar) */}}
+        {{ if $p.name }}
+        <div class="flex items-center gap-4 mb-4 pb-4 border-b border-olive-soft/10">
+            {{ if $p.img }}<img src="{{ $p.img }}" class="w-12 h-12 object-contain">{{ end }}
+            <h2 class="text-xl font-bold text-brown-dark">{{ $p.name }}</h2>
+        </div>
+        {{ end }}
+
+        {{/* Bankgegevens Sectie */}}
+        <div class="grid grid-cols-1 gap-4">
+            {{ $fields := slice (dict "id" "bank-name" "label" "Begunstigde" "val" $naam) (dict "id" "bank-iban" "label" "IBAN" "val" $iban) (dict "id" "bank-bic" "label" "BIC" "val" $bic) }}
+            {{ range $fields }}
+            <div>
+                <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest">{{ .label }}</label>
+                {{ if .val }}
+                    <p class="text-lg font-mono font-semibold text-brown-dark">{{ .val }}</p>
+                    <input type="hidden" id="{{ .id }}" value="{{ .val }}">
+                {{ else }}
+                    <input type="text" id="{{ .id }}" class="w-full border-b border-olive-soft/40 focus:border-olive-soft outline-none py-1 text-lg font-mono" placeholder="Vul {{ .label }} in...">
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+
+        {{/* Bedragen */}}
+        <div>
+            <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3">Kies een bedrag</label>
+            <div class="flex flex-wrap gap-2">
+                {{ range $prijzen }}
+                <button onclick="setAmount({{ . }})" class="amount-btn border-2 border-olive-soft/20 px-4 py-2 rounded-xl font-bold hover:bg-olive-soft/5 transition-all" data-amount="{{ . }}">€ {{ . }}</button>
+                {{ end }}
+                <div class="relative">
+                    <span class="absolute left-3 top-2 text-gray-400">€</span>
+                    <input type="number" id="custom-amount" oninput="setAmount(this.value)" class="w-28 border-2 border-olive-soft/20 rounded-xl pl-7 pr-2 py-2 outline-none focus:border-olive-soft" placeholder="Ander...">
+                </div>
+            </div>
+        </div>
+
+        {{/* QR & Link */}}
+        <div class="flex flex-col md:flex-row gap-8 items-center pt-6 border-t border-olive-soft/10">
+            <div id="qrcode" class="p-3 bg-white border border-olive-soft/10 rounded-xl shadow-inner"></div>
+            <div class="w-full space-y-4">
+                <a id="iban-link" href="#" class="block w-full bg-red-palestina text-white text-center py-4 rounded-2xl font-bold shadow-md hover:brightness-110 transition-all">
+                    Open Banking App
+                </a>
+                
+                <div class="grid grid-cols-1 gap-2">
+                    <button onclick="copyToClipboard('bank-iban', 'IBAN')" class="flex items-center justify-center gap-2 w-full border-2 border-olive-soft text-olive-soft py-3 rounded-xl font-bold hover:bg-olive-soft/5 transition-all">
+                        <span>📋 Kopieer IBAN</span>
+                    </button>
+                    <p class="text-[10px] text-center text-gray-400 italic">Klik hierboven als je bank-app niet automatisch opent</p>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+
+<script src="/js/qrcode.min.js"></script>
+<script>
+    const mededeling = "{{ $mededeling }}";
+    const qrcodeElement = document.getElementById("qrcode");
+    const qrcode = new QRCode(qrcodeElement, { 
+        width: 140, 
+        height: 140,
+        correctLevel: QRCode.CorrectLevel.M 
+    });
+
+    function getVal(id) { return document.getElementById(id).value; }
+
+    function updateUI() {
+        const name = getVal('bank-name');
+        const iban = getVal('bank-iban');
+        const bic = getVal('bank-bic');
+        const amount = getVal('custom-amount') || 0;
+
+        const formattedAmount = amount > 0 ? `EUR${parseFloat(amount).toFixed(2)}` : "";
+        const epc = `BCD\n002\n1\nSCT\n${bic}\n${name}\n${iban}\n${formattedAmount}\n\n\n${mededeling}`;
+        qrcode.makeCode(epc);
+
+        // In plaats van de simpele iban: link
+        const formattedName = encodeURIComponent(name);
+        const formattedMsg = encodeURIComponent(mededeling);
+        const amt = amount > 0 ? amount : "";
+
+        // Optie A: De standaard SEPA link
+        const ibanUri = `iban:${iban}?name=${formattedName}&amount=${amt}&message=${formattedMsg}`;
+        // Optie B: Payconiq/Bancontact specifieke trigger (indien gewenst)
+        const payconiqUri = `bancontact://pay?receiver=${formattedName}&iban=${iban}&amount=${amt}&msg=${formattedMsg}`;
+        // Optie C: Universele betaal-link (minder ondersteund, maar werkt in sommige apps)
+        const universalUri = `payto://${iban}?name=${formattedName}&amount=${amt}&message=${formattedMsg}`;
+        // Optie D: SEPA met dubbele // voor bredere compatibiliteit
+        const iban2Uri = `iban://pay?receiver=${formattedName}&iban=${iban}&amount=${amt}&msg=${formattedMsg}`;
+        // optie E: SEPA met sepa:// schema (sommige apps herkennen dit beter)
+        const sepaUri = `sepa:?name=${formattedName}&iban=${iban}&bic=${bic}&amount=${amt}&msg=${formattedMsg}`;
+
+        // We blijven bij SEPA, maar voegen de // toe voor betere compatibiliteit
+        document.getElementById("iban-link").href = ibanUri;
+    }
+
+    function setAmount(val) {
+        document.getElementById('custom-amount').value = val > 0 ? val : "";
+        document.querySelectorAll('.amount-btn').forEach(b => {
+            const isSelected = b.dataset.amount == val;
+            b.classList.toggle('bg-olive-soft', isSelected);
+            b.classList.toggle('text-white', isSelected);
+            b.classList.toggle('border-olive-soft', isSelected);
+        });
+        updateUI();
+    }
+
+    function copyToClipboard(elementId, label) {
+        const el = document.getElementById(elementId);
+        const val = el.value || el.innerText;
+        const btn = event.currentTarget; // Pak de knop direct bij de klik
+        const originalText = btn.innerHTML;
+
+        if (!val) return;
+
+        // Helper functie voor visuele feedback
+        const showSuccess = () => {
+            btn.innerHTML = `✅ ${label} Gekopieerd!`;
+            btn.classList.add('bg-olive-soft', 'hover:bg-olive-soft', 'text-white');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-olive-soft', 'hover:bg-olive-soft', 'text-white');
+            }, 2000);
+        };
+
+        // 1. Probeer de moderne Clipboard API (vereist HTTPS)
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(val).then(showSuccess).catch(err => {
+                console.error("Clipboard API faalde: ", err);
+                fallbackCopy(val, showSuccess);
+            });
+        } else {
+            fallbackCopy(val, showSuccess);
+        }
+    }
+
+    function fallbackCopy(text, callback) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        // Zorg dat het element niet zichtbaar is
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        textArea.style.top = "0";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+            document.execCommand('copy');
+            callback();
+        } catch (err) {
+            console.error('Fallback kopieer-methode faalde', err);
+        }
+        document.body.removeChild(textArea);
+    }
+
+    // Input listeners voor de lege velden
+    ['bank-name', 'bank-iban', 'bank-bic'].forEach(id => {
+        const el = document.getElementById(id);
+        if(el && el.type !== 'hidden') el.addEventListener('input', updateUI);
+    });
+
+    // Startbedrag (bijv. 2e optie uit de lijst)
+    setAmount({{ index $prijzen 1 }});
+</script>

@@ -1,5 +1,5 @@
 <div id="partner-container" class="space-y-8 my-8 flex flex-col">
-  {{ range $id, $partner := .Page.Params.partners }}
+  {{ range $id, $partner := hugo.Data.partners }}
   <div class="partner-card flex flex-col md:flex-row gap-6 p-6 bg-olive-soft/5 border border-olive-soft/20 rounded-xl shadow-sm hover:shadow-md transition-shadow" 
         style="order: 0;" 
         data-name="{{ $id }}">

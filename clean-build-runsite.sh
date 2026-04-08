@@ -15,7 +15,7 @@ echo "Tailwind watcher gestart met PID: $TW_PID"
 
 # 3. Start Hugo Server
 # Hugo ziet nu de main.css verschijnen en zal via LiveReload je browser verversen
-hugo server -D
+hugo server -D --bind 0.0.0.0  # door bind 0 kunnen ook andere apparaten in het netwerk de site bereiken voor tests
 
 # 4. Cleanup: als je Hugo stopt (Ctrl+C), stopt ook de Tailwind watcher door:
 kill $TW_PID

@@ -1,9 +1,4 @@
----
-title: Steun deze projecten
-layout: "single"
-
-partners:
-  roosjes-palestina:
+01-roosjes-palestina:
     name: Roosjes voor Palestina
     descr: | 
         🌹Doneer een roos ter herdenking aan de Palestijnse kinderslachtoffers.  
@@ -15,8 +10,9 @@ partners:
     donate:
         iban:
         bic:
-        link:
-  olijven-en-dadels: 
+        name: Roosjes voor Palestina
+        link: /donaties/roosjes-voor-palestina/
+02-olijven-en-dadels: 
     name: زيتون و تمور Olijven en Dadels
     descr: |
         Oostends netwerkverband van Amnesty International, Broederlijk Delen, 
@@ -27,8 +23,9 @@ partners:
     donate:
         iban:
         bic:
-        link:
-  palestina-solidariteit:
+        name: Olijven en Dadels
+        link: /donaties/olijven-en-dadels/
+03-palestina-solidariteit:
     name: Palestina Solidariteit vzw
     descr: |
         Palestina Solidariteit vzw is een onafhankelijke vrijwilligersbeweging die op basis van 
@@ -41,13 +38,3 @@ partners:
         iban: BE64 5230 8014 8852
         bic: TRIOBEBB
         link: https://palestinasolidariteit.be/steun-palestina-solidariteit/
-
----
-
-Tijdens onze wekelijkse stand-in in Oostende herinneren we voorbijgangers aan de situatie in Palestina. Hoewel we van de Stad Oostende geen fysieke collectebus mogen inzetten in de publieke ruimte, is er veel bereidheid om te helpen.
-
-Wij treden daarom graag op als wegwijzer. Giften die ons bereiken, sturen wij integraal door naar onderstaande projecten. We moedigen je echter aan om je steun rechtstreeks aan deze organisaties te bezorgen:
-
-{{< partner-list >}}
-
-*Opmerking: Afhankelijk van de organisatie zijn giften al dan niet fiscaal aftrekbaar. In alle gevallen worden deze middelen met de grootste zorg en transparantie beheerd door de respectievelijke partners.*
