@@ -3,9 +3,9 @@ title: Steun deze projecten
 layout: "single"
 ---
 
-Tijdens onze wekelijkse stand-in in Oostende herinneren we voorbijgangers aan de situatie in Palestina. Hoewel we van de Stad Oostende geen fysieke collectebus mogen inzetten in de publieke ruimte, is er veel bereidheid om te helpen.
+Tijdens onze wekelijkse stand-in in Oostende herinneren we de voorbijgangers aan de situatie in Palestina en Libanon. Veel mensen willen helpen. Maar hoe? 
 
-Wij treden daarom graag op als wegwijzer. Giften die ons bereiken, sturen wij integraal door naar onderstaande projecten. We moedigen je echter aan om je steun rechtstreeks aan deze organisaties te bezorgen:
+De Stad Oostende blijft weigeren om toelating te geven voor een collectebus in de openbare ruimte. We treden daarom op als 'wegwijzer'. Giften die ons - zie onderstaande organisaties - bereiken, sturen wij integraal door. Wij steunen hulp-, mensenrechten- en vredesorganisaties in Palestina.
 
 {{< partner-list >}}
 

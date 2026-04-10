@@ -19,7 +19,7 @@ locaties:
     title: Wapenplein
     img: /images/locatie/wapenplein.png
     link: https://www.openstreetmap.org/?mlat=51.231962&mlon=2.917374#map=18/51.231962/2.917374
-    omschrijving: Op het Wapenplein staan we in het verlengde van de Kappelestraat.
+    omschrijving: Op het Wapenplein staan we in het verlengde van de Kapellestraat.
   zeedijk:
     title: Zeedijk
     img: /images/locatie/zeedijk.png
