@@ -9,4 +9,6 @@ De Stad Oostende blijft weigeren om toelating te geven voor een collectebus in d
 
 {{< partner-list >}}
 
+<!-- 
 *Opmerking: Afhankelijk van de organisatie zijn giften al dan niet fiscaal aftrekbaar. In alle gevallen worden deze middelen met de grootste zorg en transparantie beheerd door de respectievelijke partners.*
+-->
