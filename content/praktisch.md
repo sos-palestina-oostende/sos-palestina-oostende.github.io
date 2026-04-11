@@ -9,11 +9,13 @@ events:
   - date: "2026-04-11"
     location: "Zeedijk"
   - date: "2026-04-18"
-    location: "Zeedijk"
+    location: "Wapenplein"
   - date: "2026-04-25"
     location: "Wapenplein"
   - date: "2026-05-02"
     location: "Wapenplein"
+  - date: "2026-05-09"
+    location: "Zeedijk"
 locaties:
   wapenplein:
     title: Wapenplein
