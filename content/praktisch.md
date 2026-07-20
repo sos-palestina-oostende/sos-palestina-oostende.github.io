@@ -23,6 +23,7 @@ events:
   - date: "2026-09-19"
     location: "Zeedijk"
   - date: "2026-09-26"
+    location: "Wapenplein"
   - date: "2026-10-03"
     location: "Zeedijk"
   - date: "2026-10-10"
