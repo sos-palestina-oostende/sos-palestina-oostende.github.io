@@ -9,7 +9,7 @@
     <!-- Kaartenoverzicht -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {{ range .Pages.ByWeight }}
-        <a href="{{ .Permalink }}" class="no-underline group flex flex-col justify-between bg-white/70 hover:bg-white/95 backdrop-blur-sm rounded-2xl border border-olive-soft/20 hover:border-olive-soft/40 p-6 shadow-sm hover:shadow-md transition-all duration-200">
+        <a href="{{ .RelPermalink }}" class="no-underline group flex flex-col justify-between bg-white/70 hover:bg-white/95 backdrop-blur-sm rounded-2xl border border-olive-soft/20 hover:border-olive-soft/40 p-6 shadow-sm hover:shadow-md transition-all duration-200">
             <div>
                 {{ if .Params.stelling }}
                 <div class="mb-3">
