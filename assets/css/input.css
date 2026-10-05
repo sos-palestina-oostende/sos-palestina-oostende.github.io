@@ -12,8 +12,8 @@
   }
 
   main {
-    /* bg-white met 80% opacity en een lichte blur voor leesbaarheid */
-    @apply bg-white/25 backdrop-blur-sm shadow-xl rounded-lg;
+    /* Getest: 0.55 opacity laat de rokerige achtergrond mooi doorlekken met voldoende leesbaarheid */
+    @apply bg-white/[0.55] backdrop-blur-md shadow-xl rounded-2xl border border-white/40;
   }
   
   h1, h2, h3 {
@@ -21,11 +21,11 @@
   }
 
   .box {
-    @apply bg-olive-soft/80 text-white p-6 rounded-lg;
+    @apply bg-olive-soft text-white p-6 rounded-xl shadow-sm border border-olive-soft/20;
 
     h1, h2, h3 {
       margin-top: 0;
-      @apply text-red-palestina font-bold;
+      @apply text-white font-bold border-b border-white/20 pb-2 mb-3;
     }
   }
 }
@@ -46,5 +46,5 @@
 }
 
 .glass-panel {
-  @apply bg-white/35 backdrop-blur-sm shadow-lg rounded-lg p-6 flex-grow container mx-auto px-4 py-8 my-4;
+  @apply bg-white/[0.55] backdrop-blur-md shadow-xl rounded-2xl border border-white/40 p-6 flex-grow container mx-auto px-4 py-8 my-6;
 }
