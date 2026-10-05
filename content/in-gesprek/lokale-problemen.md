@@ -1,6 +1,8 @@
 ---
-Titel: Er zijn hier nog geen problemen genoeg!
-
+title: "Waarom solidariteit met Palestina geen verwaarlozing van Oostende is"
+stelling: "Er zijn hier nog geen problemen genoeg!"
+summary: "Het is geen 'of-of' verhaal. Veel van onze vrijwilligers zijn juist lokaal actief, en gerechtigheid stopt niet bij de stadsgrenzen."
+weight: 20
 lokale_werken:
   - naam: Voedselbank West-Vlaanderen
     site: https://www.foodbank-west-vlaanderen.be/
@@ -12,7 +14,7 @@ lokale_werken:
 
 Die zijn er, en je zult misschien verbaasd zijn dat de meeste van onze vrijwilligers hun betrokkenheid met lokale kwesties niet uit de weg gaan. Hieronder wat lokale mogelijkheden. We hopen je daar ook te begroeten.
 
-{{ < lokale-werken-list > }}
+{{< lokale-werken-list >}}
 
 Maar we stappen de rest van de gevolgtrekking niet goed. 
 

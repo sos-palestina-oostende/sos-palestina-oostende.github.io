@@ -1,3 +1,19 @@
-<div>
-{{ .Inner }}
+<div class="not-prose my-8 p-6 bg-white/70 border border-olive-soft/20 rounded-2xl shadow-sm flex flex-col md:flex-row gap-6 items-start">
+    {{ with .Get "cover" }}
+    <div class="w-28 sm:w-36 shrink-0 shadow-md rounded-lg overflow-hidden border border-olive-soft/10">
+        <img src="{{ . }}" alt="{{ $.Get "boek" }}" class="w-full h-auto object-cover m-0">
+    </div>
+    {{ end }}
+    <div class="flex-grow">
+        <div class="text-brown-dark/90 italic font-serif leading-relaxed text-sm sm:text-base border-l-2 border-olive-soft/30 pl-4 my-2">
+            {{ .Inner | markdownify }}
+        </div>
+        {{ if or (.Get "auteur") (.Get "boek") }}
+        <div class="mt-4 text-xs text-brown-dark font-sans">
+            {{ with .Get "auteur" }}<span class="font-bold text-olive-soft">{{ . }}</span>{{ end }}
+            {{ if and (.Get "auteur") (.Get "boek") }} &mdash; {{ end }}
+            {{ with .Get "boek" }}<cite class="italic text-brown-dark/70">{{ . }}</cite>{{ end }}
+        </div>
+        {{ end }}
+    </div>
 </div>

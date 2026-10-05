@@ -1,5 +1,8 @@
 ---
-Title: Er is geen alternatief
+title: "De mythe dat er geen alternatief is voor totale vernietiging"
+stelling: "Er is geen alternatief!"
+summary: "Is het verwoesten van een samenleving werkelijk het summum van menselijk vernuft? Over diplomatie, internationaal recht en de harde spiegel van Omar el Akkad."
+weight: 30
 ---
 
 Serieus? 

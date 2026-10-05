@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto py-4">
+    <!-- Inleiding / Prelude -->
+    <div class="prose max-w-none text-brown-dark mb-10">
+        <h1 class="text-3xl sm:text-4xl font-bold text-olive-soft mb-4">{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+
+    <!-- Kaartenoverzicht -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        {{ range .Pages.ByWeight }}
+        <a href="{{ .Permalink }}" class="no-underline group flex flex-col justify-between bg-white/70 hover:bg-white/95 backdrop-blur-sm rounded-2xl border border-olive-soft/20 hover:border-olive-soft/40 p-6 shadow-sm hover:shadow-md transition-all duration-200">
+            <div>
+                {{ if .Params.stelling }}
+                <div class="mb-3">
+                    <span class="text-[11px] uppercase tracking-wider font-bold text-olive-soft/80 block mb-1">Gehoord op straat</span>
+                    <p class="text-lg font-serif italic font-bold text-brown-dark group-hover:text-red-palestina transition-colors leading-snug">
+                        „{{ .Params.stelling }}”
+                    </p>
+                </div>
+                {{ end }}
+
+                <h3 class="text-base font-bold text-olive-soft mb-2 group-hover:text-brown-dark transition-colors">
+                    {{ .Title }}
+                </h3>
+
+                {{ if .Params.summary }}
+                <p class="text-sm text-brown-dark/80 line-clamp-3 leading-relaxed">
+                    {{ .Params.summary }}
+                </p>
+                {{ else if .Summary }}
+                <p class="text-sm text-brown-dark/80 line-clamp-3 leading-relaxed">
+                    {{ .Summary | plainify | chomp }}
+                </p>
+                {{ end }}
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-olive-soft/10 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-olive-soft group-hover:text-red-palestina transition-colors">
+                <span>Lees ons perspectief</span>
+                <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

@@ -1,5 +1,8 @@
 ---
-Title: Stelletje Hamas-supporters!
+title: "Over de karikatuur van Hamas en het redelijke centrum"
+stelling: "Stelletje Hamas-supporters!"
+summary: "Zowel extremisme als veralgemening verjagen het redelijke midden. Waarom onze roep om internationaal recht en vrede niets te maken heeft met die karikatuur."
+weight: 10
 ---
 
 De naam "Hamas" dekt heel wat lagen, het is niet alleen een verzetsbeweging, het is ook een politieke beweging. Er valt best heel wat over te zeggen, hier en daar zelfs met subtiele inzichtelijk nuances en historische duiding.
