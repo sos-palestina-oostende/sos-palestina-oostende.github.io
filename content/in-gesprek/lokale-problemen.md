@@ -18,7 +18,7 @@ lokale_werken:
     omschrijving: Vind zinvol lokaal vrijwilligerswerk dat bij jou past in Oostende.
 ---
 
-Die zijn er, en je zult misschien verbaasd zijn dat de meeste van onze vrijwilligers hun betrokkenheid met lokale kwesties niet uit de weg gaan. Hieronder wat lokale mogelijkheden. We hopen je daar ook te begroeten.
+En daar heb je volkomen gelijk in: die zijn er zeker. Maar je zult misschien verrast zijn dat de meesten van onze vrijwilligers hun betrokkenheid bij lokale noden allerminst uit de weg gaan. Integendeel: velen van ons zetten zich ook hier in Oostende en West-Vlaanderen actief in voor wie het moeilijk heeft. Hieronder een paar warme initiatieven waar we je ook heel graag begroeten:
 
 {{< lokale-werken-list >}}
 

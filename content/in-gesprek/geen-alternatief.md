@@ -5,13 +5,13 @@ summary: "Is het verwoesten van een samenleving werkelijk het summum van menseli
 weight: 30
 ---
 
-Serieus? 
-Dit is het toppunt van menselijk oplossingsgericht vernuft? 
-Het toonbeeld van het "meest ethische leger uit de geschiedenis ooit"?
+*„Wat moesten ze dan anders doen? Er is toch geen alternatief?”*
 
-Overleg, diplomatie, internationaal recht zijn niet eens te overwegen.
+Het is misschien wel het meest gehoorde argument. Alsof het platgooien van hele woonwijken, het uithongeren van twee miljoen mensen en het doden van tienduizenden kinderen een onontkoombare natuurwet is. Het enige logische gevolg.
 
-Dit is het te volgen morele voorbeeld. Het sumum van waar onze moderne samenleving in staat is.
+Maar sinds wanneer is totale verwoesting het toppunt van menselijk oplossingsgericht vernuft? Is dit werkelijk het summum van wat onze moderne, 'ethische' samenleving te bieden heeft?
+
+De Canadees-Egyptische auteur Omar el Akkad hield die macabere logica een genadeloze spiegel voor:
 
 {{< quote
     auteur="Omar el Akkad"
@@ -32,4 +32,8 @@ Iemands tanden te breken en een toiletborstel in zijn mond te duwen.
 Gevechtshonden los te laten op een man met het syndroom van Down en hem vervolgens te laten sterven.  
 Anders zou de onbeschaafde wereld wel eens kunnen winnen.
 {{< /quote >}}
+
+Er zijn wél alternatieven. Die zijn er altijd geweest: diplomatie, het afdwingen van het internationaal recht, het beëindigen van een decennialange illegale bezetting en gelijke rechten voor iedereen die er woont. 
+
+Zeggen dat er „geen alternatief” is, is geen nuchtere analyse van de werkelijkheid. Het is een intellectuele en morele capitulatie.
 

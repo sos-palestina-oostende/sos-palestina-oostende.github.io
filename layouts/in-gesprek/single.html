@@ -25,15 +25,50 @@
         {{ .Content }}
     </div>
 
-    <!-- Uitnodiging tot dialoog onderaan -->
-    <div class="not-prose mt-12 pt-6 border-t border-olive-soft/20 flex flex-col sm:flex-row items-center justify-between gap-4 bg-olive-soft/5 rounded-2xl p-6">
-        <div class="text-sm text-brown-dark">
-            <p class="font-bold mb-1">Wil je hier rustig over doorpraten?</p>
-            <p class="text-brown-dark/80">Onze stand-in is stil en sereen, maar we nodigen je achteraf van harte uit voor een warme koffie en een respectvol gesprek.</p>
-        </div>
-        <a href="/in-gesprek/" class="shrink-0 text-xs font-bold uppercase tracking-wider bg-olive-soft text-white px-4 py-2.5 rounded-full hover:bg-opacity-90 transition-all">
-            Meer reacties
+    <!-- Doorstroom / Volgende stelling of Koffie-afsluiter -->
+    {{ $pages := .CurrentSection.RegularPages.ByWeight }}
+    {{ $next := false }}
+    {{ $prev := false }}
+    {{ $found := false }}
+    {{ range $p := $pages }}
+        {{ if eq $p.RelPermalink $.RelPermalink }}
+            {{ $found = true }}
+        {{ else if and $found (not $next) }}
+            {{ $next = $p }}
+        {{ else if not $found }}
+            {{ $prev = $p }}
+        {{ end }}
+    {{ end }}
+
+    <div class="not-prose mt-12 pt-6 border-t border-olive-soft/20">
+        {{ if $next }}
+        <!-- Volgende stelling -->
+        <a href="{{ $next.RelPermalink }}" class="group block no-underline bg-white/70 hover:bg-white/95 rounded-2xl border border-olive-soft/20 hover:border-olive-soft/40 p-6 shadow-sm hover:shadow-md transition-all duration-200">
+            <div class="flex items-center justify-between text-[11px] uppercase tracking-widest font-bold text-olive-soft mb-2">
+                <span>Volgende reactie van de straat</span>
+                <span class="text-xs group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </div>
+            {{ with $next.Params.stelling }}
+            <p class="text-lg sm:text-xl font-serif italic text-brown-dark font-medium leading-snug group-hover:text-red-palestina transition-colors m-0 mb-1">
+                „{{ . }}”
+            </p>
+            {{ end }}
+            <p class="text-xs text-brown-dark/70 m-0">
+                {{ $next.Title }}
+            </p>
         </a>
+        {{ else }}
+        <!-- Laatste pagina in de reeks: Koffie-afsluiter -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-olive-soft/10 rounded-2xl p-6">
+            <div class="text-sm text-brown-dark">
+                <p class="font-bold mb-1">Zullen we samen op de koffie gaan?</p>
+                <p class="text-brown-dark/80 m-0">Onze stand-in is stil en sereen, maar we nodigen je achteraf van harte uit voor een warme koffie en een respectvol gesprek over al deze vragen.</p>
+            </div>
+            <a href="/in-gesprek/" class="shrink-0 text-xs font-bold uppercase tracking-wider bg-olive-soft text-white px-5 py-3 rounded-full hover:bg-opacity-90 transition-all shadow-sm">
+                Terug naar alle reacties
+            </a>
+        </div>
+        {{ end }}
     </div>
 </article>
 {{ end }}
