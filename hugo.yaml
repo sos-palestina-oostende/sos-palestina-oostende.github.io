@@ -6,6 +6,7 @@ theme: [] # We bouwen zelf met Tailwind, dus geen extern thema nodig
 params:
   description: "Steunacties voor Palestina vanuit Oostende"
   logo: "/images/icon/flag-heart.svg"
+  og_image: "/images/icon/flag-heart.png"
   facebook_url: "https://www.facebook.com/profile.php?id=61554252122843"
   menu_donatie_class: "btn-donatie"
 
