@@ -6,23 +6,26 @@ weight: 20
 lokale_werken:
   - naam: Voedselbank West-Vlaanderen
     site: https://www.foodbank-west-vlaanderen.be/
+    logo: /images/logo/voedselbank.png
+    omschrijving: Hulp voor mensen in kansarmoede in onze provincie.
   - naam: Pleegzorg West-Vlaanderen
     site: https://www.pleegzorg.be/west-vlaanderen
-  - naam: Vlaams Steunpunt vrijwilligerswerk
+    logo: /images/logo/pleegzorg.png
+    omschrijving: Zorg, ondersteuning en onderdak voor kwetsbare kinderen en jongeren.
+  - naam: Vlaams Steunpunt Vrijwilligerswerk
     site: https://www.vrijwilligerswerk.be/vacatures
+    logo: /images/logo/vlaanderen-vrijwilligt.svg
+    omschrijving: Vind zinvol lokaal vrijwilligerswerk dat bij jou past in Oostende.
 ---
 
 Die zijn er, en je zult misschien verbaasd zijn dat de meeste van onze vrijwilligers hun betrokkenheid met lokale kwesties niet uit de weg gaan. Hieronder wat lokale mogelijkheden. We hopen je daar ook te begroeten.
 
 {{< lokale-werken-list >}}
 
-Maar we stappen de rest van de gevolgtrekking niet goed. 
+Maar we stappen echt niet mee in de rest van de gevolgtrekking. 
 
-Hoe is onze uitgesproken hoop op beterschap voor de situatie van de Palestijnen een aanval op verbetering van het leven van de lokale medemens die hetzelfde verdient?
+Hoe kan onze uitgesproken hoop op beterschap voor de situatie van de Palestijnen een aanval zijn op verbetering van het leven van de lokale medemens die hetzelfde verdient?
 
-Is hun verdere onderdrukking (en dan nog op deze manier) de noodzakelijke voorwaarde voor beterschap hier? 
+Is hun verdere onderdrukking (en vooral: op deze brutale, moorddadige manier) dan de voorwaarde voor beterschap hier? Wij gaan in die redenering dus niet mee. Het is niet of hun of wij. Integendeel, we zien parallellen op globale schaal. We zien een gedeelde strijd voor ontvoogding. Vrijheid en recht op zelfbeschikking zijn universeel. Pas als ook zij vrij kunnen leven, zijn wij echt vrij.
 
-Die redenering zien we dus niet opgaan. Het is niet of hun of wij.
-
-Het lijkt ons eerder omgekeerd. Wij zien parallellen op een globale schaal. Wij zien duidelijke verbondenheid.  Een gedeelde strijd voor ontvoogding.  Vrijheid en recht op zelfbeschikking voor iedereen. Wij zijn pas vrij hier, als zij vrij zijn daar.
-
+Dus ja, we leven in de eerste plaats in Oostende. Maar we zijn ook burgers van de wereld. En we zijn solidair met iedereen die lijdt onder onrecht, waar ook ter wereld.

@@ -16,3 +16,10 @@ Een beetje zoals de supporters van een voetbalclub dus. Wij de brave gezinnen, z
 We nodigen je daarom uit het probleem net omgekeerd te zien: zowel hun extremisme als jouw onvermogen verjaagt het redelijk pro-palestijnse centrum. Op het eind blijven enkel nog extreme stemmen het aandurven om de Palestijnse zaak te verdedigen. 
 
 Dus nee, wij lijken in de verste verste niet op de karikatuur die jij denkt te moeten schetsen. Wij staan voor een redelijke aanpak op basis van internationaal recht en diplomatie. En daarbij vetrekken we wel van het te bereiken doel: het recht van het Palestijnse volk op vrijheid en veiligheid, op hun landi (zoals door velen allang erkend).
+
+{{< youtube 
+    id="6wAGwNLFZWo" 
+    start="238" 
+    title="October 7 and The Hamas Narrative | Q+A" 
+    caption="Fragment uit het Australische debatprogramma Q+A (ABC News): over hoe het wegvallen van het gematigde midden het speelveld overlaat aan extremisme." 
+>}}

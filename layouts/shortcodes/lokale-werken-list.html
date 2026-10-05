@@ -1,9 +1,26 @@
 {{ with .Page.Params.lokale_werken }}
-<div class="not-prose my-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="not-prose my-8 grid grid-cols-1 md:grid-cols-3 gap-5">
     {{ range . }}
-    <a href="{{ .site }}" target="_blank" rel="noopener" class="flex items-center justify-between p-3 bg-white/70 hover:bg-white/95 rounded-xl border border-olive-soft/20 text-xs font-bold text-brown-dark hover:text-red-palestina transition-colors shadow-sm">
-        <span>{{ .naam }}</span>
-        <svg class="w-3.5 h-3.5 shrink-0 opacity-60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+    <a href="{{ .site }}" target="_blank" rel="noopener" class="no-underline group flex flex-col justify-between bg-white/80 hover:bg-white rounded-2xl border border-olive-soft/20 hover:border-olive-soft/40 p-5 shadow-sm hover:shadow-md transition-all duration-200">
+        <div>
+            {{ if .logo }}
+            <div class="h-14 flex items-center justify-start mb-3">
+                <img src="{{ .logo }}" alt="{{ .naam }}" class="max-h-12 max-w-[140px] object-contain m-0">
+            </div>
+            {{ end }}
+            <h4 class="font-bold text-sm text-brown-dark group-hover:text-red-palestina transition-colors leading-snug m-0">
+                {{ .naam }}
+            </h4>
+            {{ with .omschrijving }}
+            <p class="text-xs text-brown-dark/70 mt-1.5 leading-relaxed m-0">
+                {{ . }}
+            </p>
+            {{ end }}
+        </div>
+        <div class="pt-3 mt-4 border-t border-olive-soft/10 flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-olive-soft group-hover:text-red-palestina transition-colors">
+            <span>Bezoek website</span>
+            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </div>
     </a>
     {{ end }}
 </div>

@@ -1,0 +1,22 @@
+{{ $id := .Get "id" | default (.Get 0) }}
+{{ $title := .Get "title" | default "Video" }}
+{{ $caption := .Get "caption" }}
+{{ $start := .Get "start" | default (.Get "t") }}
+
+{{ $class := .Get "class" | default "max-w-lg mx-auto" }}
+
+<div class="not-prose my-8 {{ $class }}">
+    <div class="aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-olive-soft/20 bg-black/5">
+        <iframe 
+            class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/{{ $id }}{{ with $start }}?start={{ . }}{{ end }}" 
+            title="{{ $title }}" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    {{ with $caption }}
+    <p class="text-xs text-brown-dark/70 italic text-center mt-2 font-sans">{{ . }}</p>
+    {{ end }}
+</div>
